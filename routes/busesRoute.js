@@ -20,7 +20,7 @@ router.post("/add-bus", authMiddleware, async (req, res) => {
       message: "Bus added successfully",
     });
   } catch (error) {
-    res.status(500).json({ success: false, message: error.message }); //{ success: false, message: error.message }
+    res.status(500).send({ success: false, message: error.message }); //{ success: false, message: error.message }
   }
 });
 
